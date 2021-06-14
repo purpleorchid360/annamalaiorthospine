@@ -1,0 +1,26 @@
+<div class="btn-group align-self-center" role="group" aria-label="Contact">
+    {{with .Site.Params.telephone}}
+    <a href="tel:{{.}}" class="btn btn-outline-dark">
+        <i class="bi bi-telephone"></i>
+    </a>{{end}}
+    {{with .Site.Params.email}}
+    <a href="mailto:{{.}}" class="btn btn-outline-dark">
+        <i class="bi bi-envelope"></i>
+    </a>{{end}}
+    {{with .Site.Params.facebookurl}}
+    <a href="{{.}}" class="btn btn-outline-dark">
+        <i class="bi bi-facebook"></i>
+    </a>{{end}}
+    {{with .Site.Params.twitterurl}}
+    <a href="{{.}}" class="btn btn-outline-dark">
+        <i class="bi bi-twitter"></i>
+    </a>{{end}}
+    {{with .Site.Params.instagramurl}}
+    <a href="{{.}}" class="btn btn-outline-dark">
+        <i class="bi bi-instagram"></i>
+    </a>{{end}}
+    {{with .Site.Params.linkedinurl}}
+    <a href="{{.}}" class="btn btn-outline-dark">
+        <i class="bi bi-linkedin"></i>
+    </a>{{end}}
+</div>

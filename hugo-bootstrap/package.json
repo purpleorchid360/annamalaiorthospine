@@ -1,14 +1,14 @@
 {
-  "name": "hugo-bootstrap",
+  "name": "samhugo",
   "version": "1.0.0",
-  "description": "build for Annaamalai Ortho Spine center",
-  "main": "index.js",
+  "description": "learn",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.1"
+    "bootstrap": "^5.0.0-beta3"
   }
 }
