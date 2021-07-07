@@ -23,4 +23,8 @@
     <a href="{{.}}" class="btn btn-outline-dark">
         <i class="bi bi-linkedin"></i>
     </a>{{end}}
+    {{with .Site.Params.whatsappnumber}}
+    <a href="https://wa.me/{{.}}?text=Hello" class="btn btn-outline-dark">
+        <i class="bi bi-whatsapp"></i>
+    </a>{{end}}
 </div>

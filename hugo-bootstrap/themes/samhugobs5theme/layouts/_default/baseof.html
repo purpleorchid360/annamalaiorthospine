@@ -3,9 +3,10 @@
     {{- partial "head.html" . -}}
     <body style="margin-top: 1rem;">
         {{- partial "header.html" . -}}
-        <div id="content" class="pt-5">
+        <div id="content" class="py-5">
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
+        {{- partial "contact-section.html" . -}}
     </body>
 </html>

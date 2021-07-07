@@ -1,32 +1,31 @@
 {{ define "main" }}
 
 <div class="container">
-    {{with .Site.Params}}
+        {{with .Site.Params}}
         <img src="{{.logo}}" class="img-fluid d-md-none" alt="{{.logoalt}}">
-    {{end}}
-    <h2 class="text-center my-3">About Annaamalai Ortho and Spine Center</h2>
+        {{end}}
 
-    <p>Annaamalai Ortho and Spine Centre is a state of the art ortho spine treatment unit in thiruvanmaiyur, chennai. It is a one of a kind, ultramodern clinic with all orthopaedic treatment facilities under one roof.such as xray, physiotherapy, pharma dispencery and specialist consultation. Here, we treat patients suffering from low back, neck pain, congenital bone problems,joint arthritis, fractures including spine and long bones , degenerative spine problems and other tendon related injuries with scientifically proven, updated and well accepted treatment at an affordable cost. We have a fully equipped and functioning stemcell harvesting centre, minor procedure space. We are headed by internationaly trained Dr. Vignesh pushparaj. We aim to provide the best of care at an affordable price to our patients.</p>
+        <h2 class="text-center my-3">About Annaamalai Ortho and Spine Center</h2>
 
-    <h2 class="text-center my-3"> Contact Us</h2>
-
-    {{ partial "location_gmap" . }}
-
-    <h2 class="text-center my-3"> Services</h2>
-    <ul>
-        <!-- Ranges through content/posts/*.md -->
-    {{ $bloop := where $.Site.RegularPages "Section" "services"}}
-    {{ range $bloop }}
-    <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-    </li>
-    
-{{ end }}
-    </ul>
+        <p>Annaamalai Ortho and Spine Centre is a state of the art ortho spine treatment unit in thiruvanmaiyur,
+                chennai. It is
+                a one of a kind, ultramodern clinic with all orthopaedic treatment facilities under one roof.such as
+                xray,
+                physiotherapy, pharma dispencery and specialist consultation. Here, we treat patients suffering from low
+                back, neck
+                pain, congenital bone problems,joint arthritis, fractures including spine and long bones , degenerative
+                spine
+                problems and other tendon related injuries with scientifically proven, updated and well accepted
+                treatment at an
+                affordable cost. We have a fully equipped and functioning stemcell harvesting centre, minor procedure
+                space. We are
+                headed by internationaly trained Dr. Vignesh pushparaj. We aim to provide the best of care at an
+                affordable price to
+                our patients.</p>
 </div>
 
+{{ partial "services.html" . }}
 
-
+{{ partial "dr-vignesh.html" . }}
 
 {{ end }}

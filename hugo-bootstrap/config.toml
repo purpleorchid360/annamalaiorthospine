@@ -6,15 +6,18 @@ BaseURL = "https://www.annaamalaiorthospine.com/"
   
   [permalinks]
     services = ":title/"
+    blogs = ":title/"
+    case-studies = ":title/"
 
   [params]
     author = "Dr Vignesh Pushparaj"
     description = "This is an awesome Hugo Bootstrap site"
     linkedinurl  = ""
     facebookurl  = "https://www.facebook.com/annaamalaiorthospine/"
-    telephone = "+919884089340"
+    telephone = "+914448545655"
     email     = "info@annaamalaiorthospine.com"
     twitterurl   = ""
+    whatsappnumber = "919150955655"
     instagramurl = "https://www.instagram.com/annaamalaiortho/"
     icon = "/assets/images/annaamalai-wings.png"
     logo = "assets/images/annaamalai-ortho-and-spine-center-logo.png"
@@ -37,11 +40,17 @@ BaseURL = "https://www.annaamalaiorthospine.com/"
     [[menu.main]]
       identifier = "services"
       title = "Services"
-      url = "/"
+      url = "#services"
       weight = 200
     
     [[menu.main]]
       identifier = "blog"
       title = "Blog"
-      url = "/"
+      url = "#blogs"
       weight = 300
+
+    [[menu.main]]
+      identifier = "case-studies"
+      title = "Case Studies"
+      url = "#case-studies"
+      weight = 400

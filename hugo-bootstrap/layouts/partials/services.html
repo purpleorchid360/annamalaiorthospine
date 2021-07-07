@@ -1,66 +1,22 @@
-<!-- Services section -->
-<div class="container overflow-hidden mt-5">
-    <div class="row gy-lg-5 gy-sm-4">
-        <div class="col-md-6">
-            <div class="col gy-3">
-                <div class="col-auto mx-auto d-block text-center">
-                    <img height="192px" width="192px" class="rounded" src="images/sample.jpg" alt="Catering">
+<section class="container-fluid text-center py-2 py-md-5">
+    <h2 class="display-4 my-3"> Services</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- Ranges through content/posts/*.md -->
+    {{ $bloop := where $.Site.RegularPages "Section" "services"}}
+    {{ range $bloop }}
+    <div class="col">
+        <a href="{{ .Permalink }}" class="text-decoration-none">
+            <div class="card h-100 text-dark bg-light">
+                <div class="card-body">
+                    <h3 class="card-title">{{ .Title }}</h3>
+                    <p class="card-text text-start">{{ .Summary }}</p>
                 </div>
-                <div class="col text-center text-lg-left">
-                    <h3> Catering</h3>
-                    <p>
-                        World class cuisine delivered to your doorstep.
-                    </p>
-                </div>
+                <div class="card-footer text-start">
+                        <small>Read More…</small>
+                </div>                
             </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="col gy-3">
-                <div class="col-auto mx-auto d-block text-center">
-                    <img height="192px" width="192px" class="rounded" src="images/sample.jpg" alt="Corporate Events">
-                </div>
-                <div class="col text-center text-lg-left">
-                    <h3> Corporate Events</h3>
-                    <p>
-                        We pride ourselves the top notch event management services and take all the hassle of managing
-                        your event
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="col-md-6">
-            <div class="col gy-3">
-                <div class="col-auto mx-auto d-block text-center">
-                    <img height="192px" width="192px" class="rounded" src="images/sample.jpg" alt="Travel">
-                </div>
-                <div class="col text-center text-lg-left">
-                    <h3> Travel Management</h3>
-                    <p>
-                        Book amazing packages for travel accross the globe with honeymoon, getaways or just a family fun
-                        trip to theme parks!
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="col gy-3">
-                <div class="col-auto mx-auto d-block text-center">
-                    <img height="192px" width="192px" class="rounded" src="images/sample.jpg" alt="Conferences">
-                </div>
-                <div class="col text-center text-lg-left">
-                    <h3> Conferencces</h3>
-                    <p>
-
-                        We organise conference venues, speaker accomodation, AV, travel and wholistic event planning
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
+        </a>
     </div>
-</div>
+    {{ end }}
+    </div>
+</section>
