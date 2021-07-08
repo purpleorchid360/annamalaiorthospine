@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $webp1200x628 := .Page.Resources.GetMatch "*-1200x628.webp"}}
+{{ $webp750x393 := .Page.Resources.GetMatch "*-750x393.webp" }}
+{{ $webp550x288 := .Page.Resources.GetMatch "*-550x288.webp" }}
+{{ $jpg1200x628 := .Page.Resources.GetMatch "*-1200x628.jpg" }}
+{{ $jpg750x393 := .Page.Resources.GetMatch "*-750x393.jpg" }}
+{{ $jpg550x288 := .Page.Resources.GetMatch "*-550x288.jpg" }}
+
+<div class="container-fluid">
+    <picture>
+        <source srcset="{{with $webp1200x628}}{{.}}{{end}} 1200w" type="image/webp">
+        <source srcset= "{{with $webp750x393}}{{.}}{{end}} 750w" type="image/webp">
+        <source srcset= "{{with $webp550x288}}{{.}}{{end}} 550w" type="image/webp">
+        <source srcset="{{with $jpg1200x628}}{{.}}{{end}} 1200w" type="image/jpg">
+        <source srcset="{{with $jpg750x393}}{{.}}{{end}} 750w" type="image/jpg">
+        <source srcset="{{with $jpg550x288}}{{.}}{{end}} 550w" type="image/jpg">
+        <img src="{{with $jpg550x288}}{{.}}{{end}}" alt="{{.Params.featured_image_alt}}" >
+    </picture>
+</div>    
+
+<div class="container pb-5">
+    {{ .Content }}
+</div>
+
+{{ end }}

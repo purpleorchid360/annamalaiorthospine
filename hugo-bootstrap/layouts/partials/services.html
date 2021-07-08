@@ -5,8 +5,24 @@
     {{ $bloop := where $.Site.RegularPages "Section" "services"}}
     {{ range $bloop }}
     <div class="col">
+        {{ $webp1200x628 := .Page.Resources.GetMatch "*-1200x628.webp"}}
+        {{ $webp750x393 := .Page.Resources.GetMatch "*-750x393.webp" }}
+        {{ $webp550x288 := .Page.Resources.GetMatch "*-550x288.webp" }}
+        {{ $jpg1200x628 := .Page.Resources.GetMatch "*-1200x628.jpg" }}
+        {{ $jpg750x393 := .Page.Resources.GetMatch "*-750x393.jpg" }}
+        {{ $jpg550x288 := .Page.Resources.GetMatch "*-550x288.jpg" }}
+
         <a href="{{ .Permalink }}" class="text-decoration-none">
             <div class="card h-100 text-dark bg-light">
+                <picture>
+                    <source srcset="{{.Permalink}}{{with $webp1200x628}}{{.}}{{end}} 1200w" type="image/webp">
+                    <source srcset="{{.Permalink}}{{with $webp750x393}}{{.}}{{end}} 750w" type="image/webp">
+                    <source srcset="{{.Permalink}}{{with $webp550x288}}{{.}}{{end}} 550w" type="image/webp">
+                    <source srcset="{{.Permalink}}{{with $jpg1200x628}}{{.}}{{end}} 1200w" type="image/jpg">
+                    <source srcset="{{.Permalink}}{{with $jpg750x393}}{{.}}{{end}} 750w" type="image/jpg">
+                    <source srcset="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}} 550w" type="image/jpg">
+                    <img src="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" alt="{{.Params.featured_image_alt}}" class="card-img-top">
+                </picture>
                 <div class="card-body">
                     <h3 class="card-title">{{ .Title }}</h3>
                     <p class="card-text text-start">{{ .Summary }}</p>
@@ -20,3 +36,4 @@
     {{ end }}
     </div>
 </section>
+

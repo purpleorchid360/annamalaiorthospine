@@ -1,6 +1,8 @@
 ---
 title: "Arthritis Management"
 draft: false
+featured_image: arthritis-management
+featured_image_alt: An old bearded man grimacing with his hands on his knee
 menu:
     main:
         identifier: "Arthritis Management"

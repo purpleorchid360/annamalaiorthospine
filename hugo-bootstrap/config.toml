@@ -20,7 +20,7 @@ BaseURL = "https://www.annaamalaiorthospine.com/"
     whatsappnumber = "919150955655"
     instagramurl = "https://www.instagram.com/annaamalaiortho/"
     icon = "/assets/images/annaamalai-wings.png"
-    logo = "assets/images/annaamalai-ortho-and-spine-center-logo.png"
+    logo = "/assets/images/annaamalai-ortho-and-spine-center-logo.png"
     logoalt  = "Annaamalai Ortho and Spine Center Logo"
     
   
