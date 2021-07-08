@@ -11,7 +11,6 @@ BaseURL = "https://www.annaamalaiorthospine.com/"
 
   [params]
     author = "Dr Vignesh Pushparaj"
-    description = "This is an awesome Hugo Bootstrap site"
     linkedinurl  = ""
     facebookurl  = "https://www.facebook.com/annaamalaiorthospine/"
     telephone = "+914448545655"
@@ -24,6 +23,9 @@ BaseURL = "https://www.annaamalaiorthospine.com/"
     logoalt  = "Annaamalai Ortho and Spine Center Logo"
     bannerimage = "live-pain-free"
     banneralt = "A woman in a Yoga posture"  
+    title = "Annaamalai Ortho and Spine Center"
+    description = "Annaamalai Ortho and Spine Centre is a state of the art ortho spine treatment unit in thiruvanmaiyur, chennai. It is a one of a kind, ultramodern clinic with all orthopaedic treatment facilities under one roof.such as xray, physiotherapy, pharma dispencery and specialist consultation. Here, we treat patients suffering from low back, neck pain, congenital bone problems,joint arthritis, fractures including spine and long bones , degenerative spine problems and other tendon related injuries with scientifically proven, updated and well accepted treatment at an affordable cost. We have a fully equipped and functioning stemcell harvesting centre, minor procedure space. We are headed by internationaly trained Dr. Vignesh pushparaj. We aim to provide the best of care at an affordable price to our patients."
+    images = ["/assets/images/live-pain-free-1200x550.jpg", "/assets/images/annaamalai-ortho-and-spine-center-logo.png"]
   
   [module]
     [[module.mounts]]
