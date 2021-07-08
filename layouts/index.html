@@ -1,13 +1,24 @@
 {{ define "main" }}
-        {{with .Site.Params}}
-                <img src="{{.logo}}" class="img-fluid d-md-none" alt="{{.logoalt}}">
-        {{end}}
-
-<div class="container">
         
-        <h2 class="text-center my-3">About Annaamalai Ortho and Spine Center</h2>
-
-        <p>Annaamalai Ortho and Spine Centre is a state of the art ortho spine treatment unit in thiruvanmaiyur, chennai. It is a one of a kind, ultramodern clinic with all orthopaedic treatment facilities under one roof.such as xray, physiotherapy, pharma dispencery and specialist consultation. Here, we treat patients suffering from low back, neck pain, congenital bone problems,joint arthritis, fractures including spine and long bones , degenerative spine problems and other tendon related injuries with scientifically proven, updated and well accepted treatment at an affordable cost. We have a fully equipped and functioning stemcell harvesting centre, minor procedure space. We are headed by internationaly trained Dr. Vignesh pushparaj. We aim to provide the best of care at an affordable price to our patients.</p>
+{{with .Site.Params}}
+<div class="container-fluid">
+        <picture>
+                <source srcset="/assets/images/{{.bannerimage}}-1200x550.webp 1200w" type="image/webp">
+                <source srcset="/assets/images/{{.bannerimage}}-540x248.webp 540w" type="image/webp">
+                <source srcset="/assets/images/{{.bannerimage}}-360x155.webp 360w" type="image/webp">
+                <source srcset="/assets/images/{{.bannerimage}}-1200x550.jpg 1200w" type="image/jpg">
+                <source srcset="/assets/images/{{.bannerimage}}-540x248.jpg 540w" type="image/jpg">
+                <source srcset="/assets/images/{{.bannerimage}}-360x155.jpg 360w" type="image/jpg">  
+                <img src="/assets/images/{{.bannerimage}}-360x155.jpg" alt="{{.banneralt}}" class="img-fluid">
+        </picture>
+</div>
+{{end}}
+<div class="container-fluid py-2 py-md-4" >
+        <div class="container-fluid" style="max-width: 800px;">
+                <h2 class="text-center my-3">About Annaamalai Ortho and Spine Center</h2>
+                {{with .Site.Params}}<img src="{{.logo}}" class="img-fluid d-md-none" alt="{{.logoalt}}">{{end}}
+                <p class="lead">Annaamalai Ortho and Spine Centre is a state of the art ortho spine treatment unit in thiruvanmaiyur, chennai. It is a one of a kind, ultramodern clinic with all orthopaedic treatment facilities under one roof.such as xray, physiotherapy, pharma dispencery and specialist consultation. Here, we treat patients suffering from low back, neck pain, congenital bone problems,joint arthritis, fractures including spine and long bones , degenerative spine problems and other tendon related injuries with scientifically proven, updated and well accepted treatment at an affordable cost. We have a fully equipped and functioning stemcell harvesting centre, minor procedure space. We are headed by internationaly trained Dr. Vignesh pushparaj. We aim to provide the best of care at an affordable price to our patients.</p>
+        </div>
 </div>
 
 {{ partial "services.html" . }}

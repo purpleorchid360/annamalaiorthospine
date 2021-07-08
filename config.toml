@@ -22,7 +22,8 @@ BaseURL = "https://www.annaamalaiorthospine.com/"
     icon = "/assets/images/annaamalai-wings.png"
     logo = "/assets/images/annaamalai-ortho-and-spine-center-logo.png"
     logoalt  = "Annaamalai Ortho and Spine Center Logo"
-    
+    bannerimage = "live-pain-free"
+    banneralt = "A woman in a Yoga posture"  
   
   [module]
     [[module.mounts]]
