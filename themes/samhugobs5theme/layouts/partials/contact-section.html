@@ -1,18 +1,27 @@
-<section class="container-fluid my-2 my-md-5">
+<section class="container-fluid mt-2 mb-5 mt-md-5">
     <div class="row">
         <div class="col-md-6">
             {{ partial "location_gmap.html" . }}
         </div>
-        <div class="col-md-6 card text-center">
-            <h2 class="card-header"> Contact Us</h2>
-            <address class="card-body">
-                <h3 class="card-title">Annaamalai Ortho and Spine Center</h3>
-                <p class="card-text">Ground Floor - No 15-A</p>
-                <p class="card-text">Kottivakkam&nbsp;Kuppam&nbsp;Road</p>
-                <p class="card-text">Thiruvanmiyur, Chennai</p>
-                <p class="card-text">600041</p>
+        <div class="col-md-6 text-center d-flex flex-column justify-content-between border border-2 p-0">
+            <h2 class="bg-light py-2"> Contact Us</h2>
+            <address class="">
+                <h3 class="">Annaamalai Ortho&nbsp;and&nbsp;Spine&nbsp;Center</h3>
+                <p class="">Ground Floor - No 15-A, Kottivakkam&nbsp;Kuppam&nbsp;Road</p>
+                <p class="">Thiruvanmiyur, Chennai - 600041</p>
+                <div>
+                    {{with .Site.Params.telephone}}
+                    <a href="tel:{{.}}" class="btn btn-outline-dark my-2" style="width: 280px;">
+                        <i class="bi bi-telephone"> {{.}} </i>
+                    </a>{{end}}
+                    <br/>
+                    {{with .Site.Params.email}}
+                    <a href="mailto:{{.}}" class="btn btn-outline-dark my-2" style="width: 280px;">
+                        <i class="bi bi-envelope"> {{.}}</i>
+                    </a>{{end}}
+                </div>
             </address>
-            <div class="card-footer">
+            <div class="bg-light py-2">
                 {{ partial "contact-buttons.html" . }}
             </div>
         </div>
