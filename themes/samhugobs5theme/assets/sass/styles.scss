@@ -2,3 +2,11 @@ body {
   min-height: 75rem;
   padding-top: 2rem;
   }    
+
+  .accordion-body ul {
+    @extend .list-group
+  }
+
+  .accordion-body li {
+    @extend .list-group-item
+  }

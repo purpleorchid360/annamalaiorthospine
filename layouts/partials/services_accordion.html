@@ -1,0 +1,42 @@
+<section class="container-fluid text-center py-2" style="background-color: #f6eb66;">
+    <h2 class="display-4 pt-2"> Services</h2>
+    <div class="accordion" id="servicesAccordion">
+        <!-- Ranges through content/posts/*.md -->
+        {{ $bloop := where $.Site.RegularPages "Section" "services"}}
+        {{ range $bloop }}
+        <div class="accordion-item">
+            {{ $webp1200x628 := .Page.Resources.GetMatch "*-1200x628.webp"}}
+            {{ $webp750x393 := .Page.Resources.GetMatch "*-750x393.webp" }}
+            {{ $webp550x288 := .Page.Resources.GetMatch "*-550x288.webp" }}
+            {{ $jpg1200x628 := .Page.Resources.GetMatch "*-1200x628.jpg" }}
+            {{ $jpg750x393 := .Page.Resources.GetMatch "*-750x393.jpg" }}
+            {{ $jpg550x288 := .Page.Resources.GetMatch "*-550x288.jpg" }}
+            <h3 class="accordion-header" id="accordion{{.File.UniqueID}}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{.File.UniqueID}}" aria-expanded="true" aria-controls="collapse{{.File.UniqueID}}">
+                    {{ .Title }}
+                </button>
+            </h3>
+            <div id="collapse{{.File.UniqueID}}" class="accordion-collapse collapse" aria-labelledby="heading{{.File.UniqueID}}" data-bs-parent="#servicesExample">
+                <div class="accordion-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <picture class="col-md-4">
+                                <source srcset="{{.Permalink}}{{with $webp1200x628}}{{.}}{{end}} 1200w" type="image/webp">
+                                <source srcset="{{.Permalink}}{{with $webp750x393}}{{.}}{{end}} 750w" type="image/webp">
+                                <source srcset="{{.Permalink}}{{with $webp550x288}}{{.}}{{end}} 550w" type="image/webp">
+                                <source srcset="{{.Permalink}}{{with $jpg1200x628}}{{.}}{{end}} 1200w" type="image/jpg">
+                                <source srcset="{{.Permalink}}{{with $jpg750x393}}{{.}}{{end}} 750w" type="image/jpg">
+                                <source srcset="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}} 550w" type="image/jpg">
+                                <img src="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" alt="{{.Params.featured_image_alt}}" class="card-img-top">
+                            </picture>
+                            <div class="col-md-8">
+                                <p class="" id="accordion{{.File.UniqueID}}content">{{ .Content }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        {{ end }}
+    </div>
+</section>

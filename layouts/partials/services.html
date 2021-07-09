@@ -1,6 +1,6 @@
 <section class="container-fluid text-center py-2" style="background-color: #f6eb66;">
     <h2 class="display-4 pt-2"> Services</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
     <!-- Ranges through content/posts/*.md -->
     {{ $bloop := where $.Site.RegularPages "Section" "services"}}
     {{ range $bloop }}
