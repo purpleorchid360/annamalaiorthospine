@@ -20,7 +20,7 @@
                     <source srcset="{{.Permalink}}{{with $jpg1200x628}}{{.}}{{end}} 1200w" type="image/jpg">
                     <source srcset="{{.Permalink}}{{with $jpg750x393}}{{.}}{{end}} 750w" type="image/jpg">
                     <source srcset="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}} 550w" type="image/jpg">
-                    <img src="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" alt="{{.Params.featured_image_alt}}" class="card-img-top">
+                    <img src="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" alt="{{.Params.featured_image_alt}}" class="card-img-top" loading="lazy">
                 </picture>
                 <div class="card-body">
                     <h3 class="card-title">{{ .Title }}</h3>
