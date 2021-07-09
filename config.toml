@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Annaamalai Ortho and Spine Center"
 theme = "samhugobs5theme"
 relativeURLS = true
-publishdir = "../publish/"
 
   [permalinks]
     services = ":title/"
