@@ -1,6 +1,11 @@
 ---
 title: "Chronic Pain Management"
 draft: false
+featured_image: chronic-pain-management
+featured_image_alt: A man bending over holding his back 
+images:
+ - chronic-pain-management-1200x628
+description: "Chronic pain lasts for months together and is spread across different parts of the body. Pain relief is fleeting. Unlike acute pain that arises suddenly due to a specific cause and goes away with treatment, chronic pain is persistent to such an extent that it interferes with simple daily-tasks/ day to day activities."
 menu:
     main:
         identifier: "Chronic Pain Management"
@@ -8,10 +13,8 @@ menu:
         parent: "services"
 ---
 
-# Chronic Pain Management
-
 **Chronic pain** lasts for months together and is spread across different parts of the body. **Pain relief** is fleeting. Unlike acute pain that arises suddenly due to a specific cause and goes away with treatment, chronic pain is persistent to such an extent that it interferes with simple daily-tasks/ day to day activities.
-
+<!--more--> 
 What causes chronic pain? In some cases it could be due to another condition such as arthritis or cancer. In some cases doctors find it hard to pin-point the cause. Often chronic pain begins due to a certain injury or disease, and even after recovering from that injury or disease, the pain stays on. 
 
 ## Treating or managing chronic pain depends on a few key factors:

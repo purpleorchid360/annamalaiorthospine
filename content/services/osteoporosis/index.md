@@ -1,16 +1,18 @@
 ---
 title: "Osteoporosis"
 draft: false
+featured_image: osteoporosis-treatment
+featured_image_alt: Diagram of a normal bone and bone with osteoporosis
+images:
+ - osteoporosis-treatment-1200x628
+description: "About 200 million people are estimated to have osteoporosis throughout the world. Osteoporosis occurs in both men and women, however osteoporosis in women is more common - women are four times more likely to develop the disease than men."
 menu:
     main:
         identifier: "Osteoporosis"
         weight: 217
         parent: "services"
 ---
-
-# Osteoporosis
-
-About 200 million people are estimated to have osteoporosis throughout the world. **Osteoporosis** occurs in both men and women, however **osteoporosis in women** is more common - women are four times more likely to develop the disease than men. 'Osteoporosis' quite literally means 'porous bone' and the disease itself weakens bones causing less bone mass and strength. This means that someone with the condition is at greater risk for sudden and unexpected bone [**fracture**](/fracture-management). Most of these are fractures of the hip, wrist and spine. Unfortunately the disease creeps up on one silently with no visible symptoms or pain. It is usually discovered only when the weakened bone fractures. 
+About 200 million people are estimated to have osteoporosis throughout the world. **Osteoporosis** occurs in both men and women, however **osteoporosis in women** is more common - women are four times more likely to develop the disease than men.<!--more--> 'Osteoporosis' quite literally means 'porous bone' and the disease itself weakens bones causing less bone mass and strength. This means that someone with the condition is at greater risk for sudden and unexpected bone [**fracture**](/fracture-management). Most of these are fractures of the hip, wrist and spine. Unfortunately the disease creeps up on one silently with no visible symptoms or pain. It is usually discovered only when the weakened bone fractures. 
 
 Bones protect internal organs and provide overall support to the body. But they play a vital role in storing calcium and other minerals. When the body needs calcium, it breaks down and rebuilds bone. Up until 30-35 years of age an individual builds more bone than he/she loses. After 35, bone breakdown occurs faster than bone buildup. Over a period of time there is a loss of bone mass. In older females, bone mass loss happens at a faster rate post menopause. Even simple household tasks can result in Osteoporotic compression fractures in these set of people.
 

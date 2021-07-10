@@ -1,6 +1,11 @@
 ---
 title: "Back and Neck Pain Management"
 draft: false
+featured_image: back-neck-pain-management
+featured_image_alt: A woman holding her back while sitting on the bed with a graphic of her spine overlaid
+images:
+ - back-neck-pain-management-1200x628
+description: "Back pain and Neck Pain are the most common aches that bring patients to Annamalai Ortho and Spine Center. When the pain is severe and has developed suddenly, it is considered acute. While chronic pain tends to last for weeks or even months together it is considered a chronic condition."
 menu:
     main:
         identifier: "Back and Neck Pain Management"
@@ -8,9 +13,8 @@ menu:
         parent: "services"
 ---
 
-# Back and Neck Pain Management
-
 **Back pain** and **Neck Pain** are the most common aches that bring patients to Annamalai Ortho and Spine Center. When the pain is severe and has developed suddenly, it is considered acute. While [**chronic pain**](/chronic-pain-management) tends to last for weeks or even months together it is considered a chronic condition.
+<!--more--> 
 
 ## Causes for Back & Neck pain include:
 

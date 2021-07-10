@@ -3,10 +3,10 @@ body {
   padding-top: 2rem;
   }    
 
-  .accordion-body ul {
+  .card-bod, .modal-body ul {
     @extend .list-group
   }
 
-  .accordion-body li {
+  .card-body, .modal-body li {
     @extend .list-group-item
   }

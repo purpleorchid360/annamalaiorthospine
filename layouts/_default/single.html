@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $webp1200x628 := .Page.Resources.GetMatch "*-1200x628.webp"}}
+{{ $webp750x393 := .Page.Resources.GetMatch "*-750x393.webp" }}
+{{ $webp550x288 := .Page.Resources.GetMatch "*-550x288.webp" }}
+{{ $jpg1200x628 := .Page.Resources.GetMatch "*-1200x628.jpg" }}
+{{ $jpg750x393 := .Page.Resources.GetMatch "*-750x393.jpg" }}
+{{ $jpg550x288 := .Page.Resources.GetMatch "*-550x288.jpg" }}
+
+
+<div class="container-fluid">
+    <picture>
+        <source srcset="{{with $webp550x288}}{{.}}{{end}}" media="(max-width: 600px)" type="image/webp">
+        <source srcset="{{with $webp750x393}}{{.}}{{end}}" media="(max-width: 800px)" type="image/webp">
+        <source srcset="{{with $webp1200x628}}{{.}}{{end}}"media="(min-width: 801px)" type="image/webp">
+        <source srcset="{{with $jpg550x288}}{{.}}{{end}}" media="(max-width: 600px)" type="image/jpg">
+        <source srcset="{{with $jpg750x393}}{{.}}{{end}}" media="(max-width: 800px)" type="image/jpg">
+        <source srcset="{{with $jpg1200x628}}{{.}}{{end}}" media="(min-width: 801px)" type="image/jpg">
+        <img    src="{{with $jpg550x288}}{{.}}{{end}}"
+                class="img-fluid rounded mx-auto d-block"
+                alt="{{.Params.featured_image_alt}}" >
+    </picture>
+</div>    
+
+<div class="container pb-5">
+    {{ .Content }}
+</div>
+
+{{ end }}
