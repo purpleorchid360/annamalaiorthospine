@@ -1,5 +1,5 @@
 <section class="container-fluid mt-2 mb-5 mt-md-5">
-    <div class="row">
+    <div class="row" style="min-height: 320px;">
         <div class="col-md-4">
             {{ partial "location_gmap.html" . }}
         </div>
@@ -17,7 +17,7 @@
                     <a href="tel:{{.}}" class="btn btn-outline-dark my-2" style="width: 280px;">
                         <i class="bi bi-telephone"> {{.}} </i>
                     </a>{{end}}
-                    <br/>
+                    <br />
                     {{with .Site.Params.email}}
                     <a href="mailto:{{.}}" class="btn btn-outline-dark my-2" style="width: 280px;">
                         <i class="bi bi-envelope"> {{.}}</i>

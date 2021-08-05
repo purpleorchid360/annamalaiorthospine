@@ -1,12 +1,18 @@
 body {
   min-height: 75rem;
   padding-top: 2rem;
-  }    
+}
 
-  .card-bod, .modal-body ul {
-    @extend .list-group
-  }
+.card-bod,
+.modal-body ul {
+  @extend .list-group;
+}
 
-  .card-body, .modal-body li {
-    @extend .list-group-item
-  }
+.card-body,
+.modal-body li {
+  @extend .list-group-item;
+}
+
+html {
+  scroll-padding-top: 100px;
+}

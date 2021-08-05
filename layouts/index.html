@@ -1,5 +1,11 @@
 {{ define "main" }}
-{{with .Site.Params}}<img src="{{.logo}}" class="img-fluid d-md-none w-50 mx-auto d-block py-2 my-md-0" alt="{{.logoalt}}">{{end}}
+{{with .Site.Params}}
+<picture>
+        <source srcset="{{.logowebp}}" type="image/webp">
+        <img src="{{.logo}}" 
+        class="img-fluid d-md-none w-50 mx-auto d-block py-2 my-md-0" 
+        alt="{{.logoalt}}">{{end}}
+</picture>
 {{with .Site.Params}}
 <div class="container-fluid">
         <picture>
