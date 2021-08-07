@@ -1,0 +1,9 @@
+<ul class="navbar-nav nav-pills w-100 d-md-flex nav-fill">
+    {{ range .Site.Menus.main.ByWeight }}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ .URL }}">
+            {{ .Title }}
+        </a>
+    </li>
+    {{ end }}
+</ul>

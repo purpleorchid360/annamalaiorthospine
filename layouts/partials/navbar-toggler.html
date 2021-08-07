@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom bg-light" id="siteNavbar">
+    <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-toggler p-0 border-0" role="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list btn btn-outline-dark"></i>
+        </a>
+        {{with .Site.Params}}
+        <a class="order-2 order-md-1 d-none d-md-inline-block" href="/">
+            <img src="{{.logo}}" style="height: 3rem;" class="navbar-brand border-0 p-0" alt="{{.logoalt}}">
+        </a>
+        {{end}}
+        <div class="order-3 order-lg-2">
+            {{- partial "contact-buttons.html" . -}}
+        </div>
+        <div class="collapse navbar-collapse order-lg-1 order-3 justify-content-evenly bg-transparent"
+            id="navbarToggler">
+            {{- partial "navbar-menu.html" . -}}
+        </div>
+    </div>
+</nav>
