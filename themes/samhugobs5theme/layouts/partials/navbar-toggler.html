@@ -1,19 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-white" style="">
     <div class="container-fluid d-flex justify-content-between">
-        <a class="navbar-toggler p-0 border-0" role="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-toggler p-0 border-0" role="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+            aria-label="Toggle navigation">
             <i class="bi bi-list btn btn-outline-dark"></i>
         </a>
         {{with .Site.Params}}
         <a class="order-2 order-md-1 d-none d-md-inline-block" href="/">
-            <img src="{{.logo}}" style="height: 6rem;" class="navbar-brand p-0"
-                alt="{{.logoalt}}">
+            <img src="{{.logo}}" style="height: 6rem;" class="navbar-brand p-0" alt="{{.logoalt}}">
         </a>
         {{end}}
         <div class="order-3 order-lg-2">
             {{- partial "contact-buttons.html" . -}}
         </div>
-        <div class="collapse navbar-collapse order-lg-1 order-3 justify-content-center bg-transparent" id="navbarTogglerDemo01">  
+        <div class="collapse navbar-collapse order-lg-1 order-3 justify-content-center bg-transparent"
+            id="navbarTogglerDemo01">
             {{- partial "navbar-menu.html" . -}}
         </div>
     </div>

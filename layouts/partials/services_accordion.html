@@ -12,22 +12,32 @@
             {{ $jpg750x393 := .Page.Resources.GetMatch "*-750x393.jpg" }}
             {{ $jpg550x288 := .Page.Resources.GetMatch "*-550x288.jpg" }}
             <h3 class="accordion-header" id="accordion{{.File.UniqueID}}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{.File.UniqueID}}" aria-expanded="true" aria-controls="collapse{{.File.UniqueID}}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse{{.File.UniqueID}}" aria-expanded="true"
+                    aria-controls="collapse{{.File.UniqueID}}">
                     {{ .Title }}
                 </button>
             </h3>
-            <div id="collapse{{.File.UniqueID}}" class="accordion-collapse collapse" aria-labelledby="heading{{.File.UniqueID}}" data-bs-parent="#servicesExample">
+            <div id="collapse{{.File.UniqueID}}" class="accordion-collapse collapse"
+                aria-labelledby="heading{{.File.UniqueID}}" data-bs-parent="#servicesExample">
                 <div class="accordion-body">
                     <div class="container-fluid">
                         <div class="row">
                             <picture class="col-md-4">
-                                <source srcset="{{.Permalink}}{{with $webp1200x628}}{{.}}{{end}} 1200w" type="image/webp">
-                                <source srcset="{{.Permalink}}{{with $webp750x393}}{{.}}{{end}} 750w" type="image/webp">
-                                <source srcset="{{.Permalink}}{{with $webp550x288}}{{.}}{{end}} 550w" type="image/webp">
-                                <source srcset="{{.Permalink}}{{with $jpg1200x628}}{{.}}{{end}} 1200w" type="image/jpg">
-                                <source srcset="{{.Permalink}}{{with $jpg750x393}}{{.}}{{end}} 750w" type="image/jpg">
-                                <source srcset="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}} 550w" type="image/jpg">
-                                <img src="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" alt="{{.Params.featured_image_alt}}" class="card-img-top">
+                                <source srcset="{{.RelPermalink}}{{with $webp1200x628}}{{.}}{{end}} 1200w"
+                                    type="image/webp">
+                                <source srcset="{{.RelPermalink}}{{with $webp750x393}}{{.}}{{end}} 750w"
+                                    type="image/webp">
+                                <source srcset="{{.RelPermalink}}{{with $webp550x288}}{{.}}{{end}} 550w"
+                                    type="image/webp">
+                                <source srcset="{{.RelPermalink}}{{with $jpg1200x628}}{{.}}{{end}} 1200w"
+                                    type="image/jpg">
+                                <source srcset="{{.RelPermalink}}{{with $jpg750x393}}{{.}}{{end}} 750w"
+                                    type="image/jpg">
+                                <source srcset="{{.RelPermalink}}{{with $jpg550x288}}{{.}}{{end}} 550w"
+                                    type="image/jpg">
+                                <img src="{{.RelPermalink}}{{with $jpg550x288}}{{.}}{{end}}"
+                                    alt="{{.Params.featured_image_alt}}" class="card-img-top">
                             </picture>
                             <div class="col-md-8">
                                 <p class="" id="accordion{{.File.UniqueID}}content">{{ .Content }}</p>
@@ -35,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
         {{ end }}
     </div>

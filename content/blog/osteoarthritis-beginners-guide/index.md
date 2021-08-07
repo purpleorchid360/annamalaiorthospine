@@ -3,11 +3,6 @@ title: "Osteoarthritis. A beginner’s guide to chronic joint pain and inflammat
 draft: false
 featuredimage: osteoarthritis-beginner-guide-1200x628.jpg
 author: "Blog Author"
-menu:
-  main:
-    identifier: "osteoarthritis-beginners-guide"
-    weight: 201
-    parent: "blog"
 ---
 
 # Osteoarthritis. A beginner’s guide to chronic joint pain and inflammation

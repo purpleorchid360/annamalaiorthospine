@@ -1,58 +1,62 @@
-<section class="container-fluid text-center py-2" style="background-color: #f6eb66;">
-    <h2 class="display-4 pt-2"> Services</h2>
+<section class="container-fluid col-xxl-9 text-center py-2" id="services">
+    <h2 class="display-4 py-2 my-2 my-md-4" style="background-color: #f6eb66;"> Services</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <!-- Ranges through content/posts/*.md -->
-    {{ $bloop := where $.Site.RegularPages "Section" "services"}}
-    {{ range $bloop }}
-    <div class="col mb-2">
-        {{ $webp1200x628 := .Page.Resources.GetMatch "*-1200x628.webp"}}
-        {{ $webp750x393 := .Page.Resources.GetMatch "*-750x393.webp" }}
-        {{ $webp550x288 := .Page.Resources.GetMatch "*-550x288.webp" }}
-        {{ $jpg1200x628 := .Page.Resources.GetMatch "*-1200x628.jpg" }}
-        {{ $jpg750x393 := .Page.Resources.GetMatch "*-750x393.jpg" }}
-        {{ $jpg550x288 := .Page.Resources.GetMatch "*-550x288.jpg" }}
-        <div class="card h-100 text-dark bg-light">
-            <picture>
-                <source srcset="{{.Permalink}}{{with $webp550x288}}{{.}}{{end}}" media="(max-width: 600px)" type="image/webp">
-                <source srcset="{{.Permalink}}{{with $webp750x393}}{{.}}{{end}}" media="(max-width: 800px)" type="image/webp">
-                <source srcset="{{.Permalink}}{{with $webp1200x628}}{{.}}{{end}}" media="(min-width: 801px)" type="image/webp">
-                <source srcset="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" media="(max-width: 600px)" type="image/jpg">
-                <source srcset="{{.Permalink}}{{with $jpg750x393}}{{.}}{{end}}" media="(max-width: 800px)" type="image/jpg">
-                <source srcset="{{.Permalink}}{{with $jpg1200x628}}{{.}}{{end}}" media="(min-width: 801px)" type="image/jpg">
-                <img src="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" 
-                class="img-fluid rounded mx-auto d-block"
-                alt="{{.Params.featured_image_alt}}"
-                loading="lazy">
-            </picture>
-            <div class="card-body">
-                <h3 class="card-title">{{ .Title }}</h3>
-                <p class="card-text text-start">{{ .Summary }}</p>
+        <!-- Ranges through content/posts/*.md -->
+        {{ $bloop := where $.Site.RegularPages "Section" "services"}}
+        {{ range $bloop }}
+        <div class="col">
+            {{ $webp1200x628 := .Page.Resources.GetMatch "*-1200x628.webp"}}
+            {{ $webp750x393 := .Page.Resources.GetMatch "*-750x393.webp" }}
+            {{ $webp550x288 := .Page.Resources.GetMatch "*-550x288.webp" }}
+            {{ $jpg1200x628 := .Page.Resources.GetMatch "*-1200x628.jpg" }}
+            {{ $jpg750x393 := .Page.Resources.GetMatch "*-750x393.jpg" }}
+            {{ $jpg550x288 := .Page.Resources.GetMatch "*-550x288.jpg" }}
+            <div class="card h-100 text-dark bg-light">
+                <picture>
+                    <source srcset="{{.RelPermalink}}{{with $webp550x288}}{{.}}{{end}}" media="(max-width: 600px)"
+                        type="image/webp">
+                    <source srcset="{{.RelPermalink}}{{with $webp750x393}}{{.}}{{end}}" media="(max-width: 800px)"
+                        type="image/webp">
+                    <source srcset="{{.RelPermalink}}{{with $webp1200x628}}{{.}}{{end}}" media="(min-width: 801px)"
+                        type="image/webp">
+                    <source srcset="{{.RelPermalink}}{{with $jpg550x288}}{{.}}{{end}}" media="(max-width: 600px)"
+                        type="image/jpg">
+                    <source srcset="{{.RelPermalink}}{{with $jpg750x393}}{{.}}{{end}}" media="(max-width: 800px)"
+                        type="image/jpg">
+                    <source srcset="{{.RelPermalink}}{{with $jpg1200x628}}{{.}}{{end}}" media="(min-width: 801px)"
+                        type="image/jpg">
+                    <img src="{{.RelPermalink}}{{with $jpg550x288}}{{.}}{{end}}"
+                        class="img-fluid rounded mx-auto d-block" alt="{{.Params.featured_image_alt}}" loading="lazy">
+                </picture>
+                <div class="card-body">
+                    <h3 class="card-title">{{ .Title }}</h3>
+                    <p class="card-text text-start">{{ .Summary }}</p>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modal{{.File.UniqueID}}">
+                        Read More
+                    </button>
+                </div>
             </div>
-            <div class="card-footer text-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal{{.File.UniqueID}}">
-                    Read More
-                </button>
-            </div>               
-        </div>
-        <div class="modal fade" id="modal{{.File.UniqueID}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="modal{{.File.UniqueID}}Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modal{{.File.UniqueID}}Title">{{.Title}}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        {{.Content}}
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal fade" id="modal{{.File.UniqueID}}" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="modal{{.File.UniqueID}}Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal{{.File.UniqueID}}Title">{{.Title}}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            {{.Content}}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    {{ end }}
+        {{ end }}
     </div>
 </section>
-

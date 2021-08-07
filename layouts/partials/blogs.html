@@ -1,5 +1,5 @@
-<section class="container-fluid text-center py-2" style="background-color: #90cb72;">
-    <h2 class="display-4 pt-2"> Blogs</h2>
+<section class="container-fluid col-xxl-9 text-center py-2" id="blogs">
+    <h2 class="display-4 py-2"> Blogs</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-evenly">
         <!-- Ranges through content/posts/*.md -->
         {{ $bloop := where $.Site.RegularPages "Section" "blog"}}
@@ -13,20 +13,20 @@
             {{ $jpg550x288 := .Page.Resources.GetMatch "*-550x288.jpg" }}
             <div class="card h-100 text-dark bg-light">
                 <picture>
-                    <source srcset="{{.Permalink}}{{with $webp550x288}}{{.}}{{end}}" media="(max-width: 600px)"
+                    <source srcset="{{.RelPermalink}}{{with $webp550x288}}{{.}}{{end}}" media="(max-width: 600px)"
                         type="image/webp">
-                    <source srcset="{{.Permalink}}{{with $webp750x393}}{{.}}{{end}}" media="(max-width: 800px)"
+                    <source srcset="{{.RelPermalink}}{{with $webp750x393}}{{.}}{{end}}" media="(max-width: 800px)"
                         type="image/webp">
-                    <source srcset="{{.Permalink}}{{with $webp1200x628}}{{.}}{{end}}" media="(min-width: 801px)"
+                    <source srcset="{{.RelPermalink}}{{with $webp1200x628}}{{.}}{{end}}" media="(min-width: 801px)"
                         type="image/webp">
-                    <source srcset="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" media="(max-width: 600px)"
+                    <source srcset="{{.RelPermalink}}{{with $jpg550x288}}{{.}}{{end}}" media="(max-width: 600px)"
                         type="image/jpg">
-                    <source srcset="{{.Permalink}}{{with $jpg750x393}}{{.}}{{end}}" media="(max-width: 800px)"
+                    <source srcset="{{.RelPermalink}}{{with $jpg750x393}}{{.}}{{end}}" media="(max-width: 800px)"
                         type="image/jpg">
-                    <source srcset="{{.Permalink}}{{with $jpg1200x628}}{{.}}{{end}}" media="(min-width: 801px)"
+                    <source srcset="{{.RelPermalink}}{{with $jpg1200x628}}{{.}}{{end}}" media="(min-width: 801px)"
                         type="image/jpg">
-                    <img src="{{.Permalink}}{{with $jpg550x288}}{{.}}{{end}}" class="img-fluid rounded mx-auto d-block"
-                        alt="{{.Params.featured_image_alt}}" loading="lazy">
+                    <img src="{{.RelPermalink}}{{with $jpg550x288}}{{.}}{{end}}"
+                        class="img-fluid rounded mx-auto d-block" alt="{{.Params.featured_image_alt}}" loading="lazy">
                 </picture>
                 <div class="card-body">
                     <h3 class="card-title">{{ .Title }}</h3>

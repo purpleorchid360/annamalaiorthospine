@@ -52,3 +52,9 @@ relativeURLS = true
       title = "Blog"
       url = "#blogs"
       weight = 300
+
+    [[menu.main]]
+      identifier = "contact"
+      title = "Contact"
+      url = "#contact"
+      weight = 400
