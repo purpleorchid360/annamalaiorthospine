@@ -3,16 +3,17 @@
 
 <head>
     <title>{{ .Title }}</title>
-    
+
     <!-- Preload Banner Image -->
-    <link rel="preload" as="image" href="/assets/images/live-pain-free-360x155.jpg"
-        imagesrcset="/assets/images/live-pain-free-360x155.webp 360w, /assets/images/live-pain-free-540x248.webp 540w, /assets/images/live-pain-free-1200x550.webp 1200w" imagesizes="100">
-    
+    <link rel="preload" as="image" href="/assets/images/annaamalai-osc-360x155.jpg"
+        imagesrcset="/assets/images/annaamalai-osc-360x155.webp 360w, /assets/images/annaamalai-osc-540x248.webp 540w, /assets/images/annaamalai-osc-1200x550.webp 1200w"
+        imagesizes="100">
+
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     {{- partial "siteicon.html" . -}}
 
     <meta name="description" content="Website meta description for google search results go here" />
@@ -20,23 +21,24 @@
     {{- partial "dcmetatags.html" . -}}
 
     {{ template "_internal/opengraph.html" . }}
-    
-    
+
+
     <link rel="stylesheet" href="css/critical.css" media="screen">
-    
-    {{ template "_internal/twitter_cards.html" . }}
+
 
     {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
     {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
-    <link rel="preload" href="{{ $style.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet';this.media='screen'">
+    <link rel="preload" href="{{ $style.RelPermalink }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet';this.media='screen'">
     <noscript>
         <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
     </noscript>
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" as="style"
         onload="this.onload=null;this.rel='stylesheet';this.media='screen'">
     <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" media="screen">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+            media="screen">
     </noscript>
-    
+
 </head>
